@@ -13,6 +13,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      error: false,
       message: "",
 
       todos: [
@@ -31,5 +32,20 @@ createApp({
     ],
 
     }
-  }
+  },
+
+  methods: {
+    addTask() {
+       if (this.message.length < 3){
+        this.error = true;
+       }else{
+        this.todos.unshift({ text: this.message, done: false });
+        this.message= "" 
+        this.error = false;
+       }
+         
+    },
+},
+
+  
 }).mount('#app')

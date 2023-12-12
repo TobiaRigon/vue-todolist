@@ -19,6 +19,8 @@
             <button @click="addTask">Aggiungi</button>
         </div>
 
+        <h3 v-if="error"> inserisci almeno 3 caratteri!</h3>
+
         <!-- output -->
 
         <div class="task-container">

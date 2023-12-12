@@ -8,3 +8,7 @@
     font-family: sans-serif;
 }
 
+.task-done {
+    text-decoration: line-through;
+}
+

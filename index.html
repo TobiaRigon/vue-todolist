@@ -12,8 +12,28 @@
 
     <div id="app">
        
-        
-        
+                
+        <!-- input -->
+        <div class="new-task">
+            <input type="text" placeholder="nuova task" v-model="message">
+            <button @click="addTask">Aggiungi</button>
+        </div>
+
+        <!-- output -->
+
+        <div class="task-container">
+            <ul>
+                <li v-for="todo in todos" :class="{ 'task-done': todo.done }">
+                    {{todo.text}}
+                </li>
+            </ul>
+
+            <h2>
+            
+            </h2>
+        </div>
+
+
     </div>
 
    

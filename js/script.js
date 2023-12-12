@@ -42,9 +42,12 @@ createApp({
         this.todos.unshift({ text: this.message, done: false });
         this.message= "" 
         this.error = false;
-       }
-         
+       }   
     },
+
+    delTask(indice){
+      this.todos.splice(indice, 1);
+    }
 },
 
   
